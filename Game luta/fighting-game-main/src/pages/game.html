@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/Game luta/fighting-game-main/img/luta.ico">
+    <link rel="stylesheet" href="../css/desenvolvimento-do-jogo/estilo.css">
+    <title>Start the game!!</title>
+</head>
+
+<body>
+    <main class="l-main">
+        <section class="l-main_buttons">
+            <div>
+                <button id="restart"> Reiniciar</button>
+                <a href="../../index.html">Trocar de personagens</a>
+            </div>
+        </section>
+
+        <section class="l-main__container">
+
+            <article class="l-container right-side">
+                <div class="c-container__healthBar-Player"></div>
+
+                <div class="c-container__healthBar-bottom" id="playerHealth"></div>
+            </article>
+
+            <div class="c-container__timer" id="timer">10</div>
+
+            <article class="l-container">
+                <div class="c-container__healthBar-Enemy"></div>
+
+                <div class="c-container__healthBar-bottom" id="enemyHealth"></div>
+            </article>
+
+        </section>
+
+        <div class="c-timer"></div>
+
+        <div id="name_player">
+            <p class="name-text-pl"><img id="image_player" src="../imagens/game/perfil/te.png"
+                    alt="foto miniatura do personagem escolhido"> <span>Homem de ferro</span></p>
+        </div>
+
+        <div id="name_enemy">
+            <p class="name-text-en"><span>Homem de ferro </span><img id="image_enemy" src="../imagens/game/perfil/te.png"
+                    alt="foto miniatura do personagem escolhido" class="inverted"></p>
+        </div>
+
+        <canvas></canvas>
+    </main>
+
+    
+
+    <audio src="../audio/Rock.mp3" loop></audio>
+
+    <!-- Animação health -->
+    
+    <script src="../js/characterSettings.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/classes.js"></script>
+    <script src="../js/game.js"></script>
+    <script>
+        //reiniciar o jogo 
+        let restart = document.querySelector('#restart').addEventListener('click', e => window.location.reload());
+
+        // Música
+       
+    </script>
+</body>
+
+</html>

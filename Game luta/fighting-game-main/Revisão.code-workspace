@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "Revisão",
+			"path": "../../.."
+		},
+		{
+			"name": "Gamificação",
+			"path": "../../../../Gamificação"
+		},
+		{
+			"name": "Gamificação",
+			"path": "../../../../../../Documents/3°Semestre/Gamificação"
+		},
+		{
+			"name": "Jogo",
+			"path": "../../../../../Jogo"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Revisão"
+	}
+}
