@@ -1,4 +1,4 @@
-@import url('../variaveis.css');
+@import url('../variaveis.css'); /* linha que determina o font do codigo player select*/
 
 body {
     font-family: 'ssf4', 'Courier New', Courier, monospace;
@@ -7,7 +7,7 @@ body {
 
 body::before {
     content: '';
-    background-image: url("/game/Game luta//fighting-game-main/src/imagens/bg-animated.gif");
+    background-image: url("/Game luta//fighting-game-main/src/imagens/bg-animated.gif");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
