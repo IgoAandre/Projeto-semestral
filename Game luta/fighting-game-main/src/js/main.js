@@ -101,17 +101,6 @@ personagens.forEach((personagem) => {
                 var idCharacterAPI = 1009452;
                 break;
 
-            case '07':
-                var idCharacterAPI = 1010338;
-                break;
-
-            case '08':
-                var idCharacterAPI = 1009610;
-                break;
-
-            case '09':
-                var idCharacterAPI = 1009368;
-                break;
 
             default:
                 alert('Erro ao selecionar o personagem :( ')
@@ -150,6 +139,7 @@ personagens.forEach((personagem) => {
 
 
 });
+
 
 
 

@@ -42,7 +42,7 @@ function winner({ player, enemy, timerID }) {
 
 // SIXTH TASK - Game trigger and game over
 // Diminuir o tempo do jogo
-let timer = 600; //MUDA O TIMER QUANTO TEMPO 
+let timer = 60;
 let timerID;
 let auxWinner = false;
 function decreaseTimer() {

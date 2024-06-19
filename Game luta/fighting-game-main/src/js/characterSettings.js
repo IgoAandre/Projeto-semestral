@@ -4,31 +4,31 @@ const settings = [
         nome: 'mayo',
         sprites: {
             idle: {
-                imgSrc: '/game/Mayo/Mayo_idle.png',
+                imgSrc: '/Mayo/Mayo_idlee.png',
                 framesMax: 4
             },
             run: {
-                imgSrc: '/game/Mayo/Mayo_run.png',
+                imgSrc: '/Mayo/Mayo_runn.png',
                 framesMax: 5
             },
             jump: {
-                imgSrc: '/game/Mayo/Mayo_jump.png',
+                imgSrc: '/Mayo/Mayo_jumpp.png',
                 framesMax: 7
             },
             fall: {
-                imgSrc: '/game/Mayo/Mayo_fall.png',
+                imgSrc: '/Mayo/Mayo_falll.png',
                 framesMax: 3
             },
             attack1: {
-                imgSrc: '/game/Mayo/Mayo_attack.png',
+                imgSrc: '/Mayo/Mayo_atackk.png',
                 framesMax: 6
             },
             takeHit: {
-                imgSrc: '/game/Mayo/Mayo_takehit.png',
+                imgSrc: '/Mayo/Mayo_takehitt.png',
                 framesMax: 4
             },
             death: {
-                imgSrc: '/game/Mayo/Mayo_death.png',
+                imgSrc: '/Mayo/Mayo_deathh.png',
                 framesMax: 5
             }
         },
@@ -38,31 +38,31 @@ const settings = [
         nome: 'el',
         sprites: {
             idle: {
-                imgSrc: '/game/EL/EL_idle.png',
+                imgSrc: '/EL/El_idlee.png',
                 framesMax: 3
             },
             run: {
-                imgSrc: '/game/EL/EL_run.png',
+                imgSrc: '/EL/El_runn.png',
                 framesMax: 5
             },
             jump: {
-                imgSrc: '/game/EL/EL_jump.png',
+                imgSrc: '/EL/El_jumpp.png',
                 framesMax: 4
             },
             fall: {
-                imgSrc: '/game/EL/EL_fall.png',
+                imgSrc: '/EL/El_falll.png',
                 framesMax: 2
             },
             attack1: {
-                imgSrc: '/game/EL/EL_attack.png',
+                imgSrc: '/EL/El_atackk.png',
                 framesMax: 4
             },
             takeHit: {
-                imgSrc: '/game/EL/EL_takehit.png',
+                imgSrc: '/EL/El_takehitt.png',
                 framesMax: 3
             },
             death: {
-                imgSrc: '/game/EL/EL_death.png',
+                imgSrc: '/EL/El_deathh.png',
                 framesMax: 2
             }
         },
@@ -72,31 +72,31 @@ const settings = [
         nome: 'luna',
         sprites: {
             idle: {
-                imgSrc: '/game/Luna/Luna_idle.png',
+                imgSrc: '/Luna/Luna_idlee.png',
                 framesMax: 6
             },
             run: {
-                imgSrc: '/game/Luna/Luna_run.png',
+                imgSrc: '/Luna/Luna_runn.png',
                 framesMax: 10
             },
             jump: {
-                imgSrc: '/game/Luna/Luna_jump.png',
+                imgSrc: '/Luna/Luna_jumpp.png',
                 framesMax: 7
             },
             fall: {
-                imgSrc: '/game/Luna/Luna_fall.png',
+                imgSrc: '/Luna/Luna_falll.png',
                 framesMax: 4
             },
             attack1: {
-                imgSrc: '/game/Luna/Luna_attack.png',
+                imgSrc: '/Luna/Luna_atackk.png',
                 framesMax: 10
             },
             takeHit: {
-                imgSrc: '/game/Luna/Luna_takehit.png',
+                imgSrc: '/Luna/Luna_takehitt.png',
                 framesMax: 14
             },
             death: {
-                imgSrc: '/game/Luna/Luna_death.png',
+                imgSrc: '/Luna/Luna_deathh.png',
                 framesMax: 7
             }
         },
@@ -106,31 +106,31 @@ const settings = [
         nome: 'vladimir',
         sprites: {
             idle: {
-                imgSrc: '/game/Vladimir/Vladimir_idle.png',
+                imgSrc: '/Vladimir/Vladimir_idlee.png',
                 framesMax: 3
             },
             run: {
-                imgSrc: '/game/Vladimir/Vladimir_run.png',
+                imgSrc: '/Vladimir/Vladimir_runn.png',
                 framesMax: 5
             },
             jump: {
-                imgSrc: '/game/Vladimir/Vladimir_jump.png',
+                imgSrc: '/Vladimir/Vladimir_jumpp.png',
                 framesMax: 3
             },
             fall: {
-                imgSrc: '/game/Vladimir/Vladimir_fall.png',
+                imgSrc: '/Vladimir/Vladimir_falll.png',
                 framesMax: 3
             },
             attack1: {
-                imgSrc: '/game/Vladimir/Vladimir_attack.png',
+                imgSrc: '/Vladimir/Vladimir_atackk.png',
                 framesMax: 3
             },
             takeHit: {
-                imgSrc: '/game/Vladimir/Vladimir_takehit.png',
+                imgSrc: '/Vladimir/Vladimir_takehitt.png',
                 framesMax: 3
             },
             death: {
-                imgSrc: '/game/Vladimir/Vladimir_death.png',
+                imgSrc: '/Vladimir/Vladimir_deathh.png',
                 framesMax: 6
             }
         },
@@ -140,31 +140,31 @@ const settings = [
         nome: 'chen',
         sprites: {
             idle: {
-                imgSrc: '/game/Chen/Chen_idle.png',
+                imgSrc: '/Chen/Chen_idlee.png',
                 framesMax: 4
             },
             run: {
-                imgSrc: '/game/Chen/Chen_run.png',
+                imgSrc: '/Chen/Chen_runn.png',
                 framesMax: 4
             },
             jump: {
-                imgSrc: '/game/Chen/Chen_jump.png',
+                imgSrc: '/Chen/Chen_jumpp.png',
                 framesMax: 6
             },
             fall: {
-                imgSrc: '/game/Chen/Chen_fall.png',
+                imgSrc: '/Chen/Chen_falll.png',
                 framesMax: 4
             },
             attack1: {
-                imgSrc: '/game/Chen/Chen_attack.png',
+                imgSrc: '/Chen/Chen_atackk.png',
                 framesMax: 5
             },
             takeHit: {
-                imgSrc: '/game/Chen/Chen_takehit.png',
+                imgSrc: '/Chen/Chen_takehitt.png',
                 framesMax: 6
             },
             death: {
-                imgSrc: '/game/Chen/Chen_death.png',
+                imgSrc: '/Chen/Chen_deathh.png',
                 framesMax: 5
             }
         },

@@ -6,7 +6,7 @@ canvas.width = 1024
 canvas.height = 567
 c.fillRect(0, 0, canvas.width, canvas.height) // black background
 
-animate
+
 // Pegar sprites dos personagens selecionados na página de seleção
 var spritesPlayerOne = [];
 var spritesPlayerTwo = [];
@@ -93,14 +93,14 @@ const player = new Fighter({
     scale: 1.8,
     offset: { //onde ele vai estar no background
         x: 215,
-        y: 40
+        y: 147
     },
     sprites: {
         idle: spritesPlayerOne[0],
         run: spritesPlayerOne[1],
         jump: spritesPlayerOne[2],
         fall: spritesPlayerOne[3],
-        attack: spritesPlayerOne[4],
+        attack1: spritesPlayerOne[4],
         takeHit: spritesPlayerOne[5],
         death: spritesPlayerOne[6]
     },
@@ -133,14 +133,14 @@ const enemy = new Fighter({
     scale: 1.8,
     offset: {
         x: 215,
-        y: 40
+        y: 147
     },
     sprites: {
         idle: spritesPlayerTwo[0],
         run: spritesPlayerTwo[1],
         jump: spritesPlayerTwo[2],
         fall: spritesPlayerTwo[3],
-        attack: spritesPlayerTwo[4],
+        attack1: spritesPlayerTwo[4],
         takeHit: spritesPlayerTwo[5],
         death: spritesPlayerTwo[6]
     },
@@ -154,7 +154,7 @@ const enemy = new Fighter({
     }
 });
 
-
+//---------------------------------------------------------------------
 
 const keys = { // THIRD TASK  // - não da para ir para direita enquanto vc vai para a esqueda pq ele esta -1 - para resolver o ploblema: mais os if abaixo
     a: {
@@ -256,7 +256,7 @@ function animate() {
             enemy: enemy
         }) &&
         player.isAttacking &&
-        player.framaCurrent == 1  // só vai por um ataque de cada vez + tempo que tira o dano em questão da animação
+        player.framaCurrent === 4  // só vai por um ataque de cada vez + tempo que tira o dano em questão da animação
     ) {
 
         // FIFTH TASK - health life!!!
@@ -269,18 +269,6 @@ function animate() {
         })
         // document.querySelector('#enemyHealth').style.width = enemy.health + '%'
     }
-
-    function colisao(objetos) {
-    const player1 = objetos.player1;
-        const player2 = objetos.enemy;
-    
-        return player1.position.x < player2.position.x + player2.attackBox.width &&
-            player1.position.x + player1.attackBox.width > player2.position.x &&
-            player1.position.y < player2.position.y + player2.attackBox.height &&
-            player1.position.y + player1.attackBox.height > player2.position.y;
-    }
-
-    
 
     // Errar ataque
     if (player.isAttacking && player.framaCurrent === 4) {
@@ -295,7 +283,7 @@ function animate() {
             enemy: enemy
         }) &&
         enemy.isAttacking &&
-        enemy.framaCurrent === 10  // só vai por um ataque de cada vez + tempo que tira o dano em questão da animação
+        enemy.framaCurrent === 4  // só vai por um ataque de cada vez + tempo que tira o dano em questão da animação
     ) {
 
         // FIFTH TASK - health life!!!

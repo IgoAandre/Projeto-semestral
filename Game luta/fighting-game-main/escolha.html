@@ -6,227 +6,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Um jogo de luta criado em HTML, CSS E JavaScript">
-    <link rel="shortcut icon" type="image/x-icon" href="img/luta.ico">
-    <meta name="Igor" content="Igor André">
+    <link rel="shortcut icon" href="src/imagens/favicon/favicon2.png" type="image/x-icon">
+    <meta name="author" content="Diogo Lima Carvalho">
     <!-- CSS only -->
-
+    
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/animacoes.css">
     <link rel="stylesheet" href="src/css/seletor-de-personagens/estilo.css">
-    <audio id="background-music" src="/Game luta/fighting-game-main/src/audio/Rock.mp3" autoplay loop></audio>
     <title>Choose your character</title>
-    
 </head>
 
 <body>
-
-    <div class="container">
-        <div class="toggle-wrapper">
-            <label class="switch">
-                <input type="checkbox" class="hidden-toggle" />
-                <div class="slider">
-                    <div class="button"></div>
-                </div>
-            </label>
-            <div class="description"></div>
-        </div>
-    </div>
-    <style>
-
-/* Apenas o container */
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 100%;
-    min-height: 100%;
-  }
-  
-  /* Aqui comença o Toggler On/Off */
-  .toggle-wrapper {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Texto que decidi adicionar como exemplo */
-  .toggle-wrapper .description {
-    margin-left: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-    font-size: 1.4rem;
-  }
-  
-  /* Esconde o checkbox */
-  .switch > .hidden-toggle {
-    display: none;
-  }
-  
-  /* Caixinha onde o botão desliza */
-  .switch > .slider {
-    background: #e0e2db;
-    border: 0.1rem solid #bbb;
-    cursor: pointer;
-    border-radius: 2rem;
-    transition: all 300ms ease-in-out;
-    width: 8rem;
-    height: 4rem;
-    position: relative;
-    box-shadow: inset -0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2),
-      0 0 1rem rgba(0, 0, 0, 0.1);
-  }
-  
-  /* O botão redondinho */
-  .switch > .slider > .button {
-    content: "";
-    position: absolute;
-    width: 3.2rem;
-    height: 3.2rem;
-    background: #db0a0a;
-    top: 0.4rem;
-    left: 0.4rem;
-    transition: all 300ms ease-in-out;
-    border-radius: 50%;
-    z-index: 2;
-    box-shadow: inset -0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Texto ON ou OFF (começa off) */
-  .switch > .slider:after {
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translate(0, -50%);
-    font-size: 1.4rem;
-    line-height: 1.4rem;
-    color: #444;
-    font-weight: bold;
-    z-index: 1;
-    transition: all 300ms ease-in-out;
-    content: "OFF";
-  }
-  
-  /* Slider ON */
-  .switch > .hidden-toggle:checked ~ .slider {
-    background: #15d428;
-    box-shadow: inset 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2),
-      0 0 1rem rgba(0, 150, 2, 0.2);
-  }
-  
-  /* Botão ON */
-  .switch > .hidden-toggle:checked ~ .slider > .button {
-    left: 4.4rem;
-    box-shadow: inset 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
-    background: #e0e2db;
-  }
-  
-  /* Texto ON */
-  .switch > .hidden-toggle:checked ~ .slider:after {
-    right: 4.4rem;
-    color: #f1f1ff;
-    content: "ON";
-  }
-
-.container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999; /* Garante que fique na frente de outros elementos */
-    transform: translate(+50%, +50%);
-}
-
-.toggle-wrapper {
-    display: flex;
-    align-items: center;
-    cursor: pointer; /* Adiciona o cursor de ponteiro ao passar por cima */
-}
-
-
-    </style>
-
-<main>
-    <header class="cabecalho">
-        <h1 class="title">Player select</h1>
-    </header>
-
-    <section class="selection">
-
-        <!-- Player 1 -->
-        <div class="big__character player__number-1">
-            <img src="src/imagens/mayo-big.png" alt="Imagem do personagem selecionado número um" id="selected__character">
-            <div class="name__character">
-                <h2 id="nome-jogador-01">Mayo</h2>
-            </div>
-        </div>
-
-
-        <!-- Characters -->
-        <ul class="characters__list">
-           
-            <li class="character seleted" id="mayo" data-name="mayo" data-number="01">
-                <span class="tag">1P</span>
-                <img src="src/imagens/Mayo.jpg" alt="Imagem miniatura do personagem mayo">
-            </li>
-            <li class="character" id="el" data-name="el" data-number="02">
-                <span class="tag">1P</span>
-                <img src="src/imagens/EL.jpg" alt="Imagem miniatura do personagem el">
-            </li>
-            <li class="character second-player_selete" id="luna" data-name="luna" data-number="03">
-                <span class="tag">2P</span>
-                <img src="src/imagens/Luna.jpg" alt="Imagem miniatura do personagem luna">
-            </li>
-            <li class="character" id="vladimir" data-name="vladimir" data-number="04">
-                <span class="tag">1P</span>
-                <img src="src/imagens/Vladimir.jpg" alt="Imagem miniatura do personagem vladimir">
-            </li>
-            <li class="character" id="chen" data-name="chen" data-number="05">
-                <span class="tag">1P</span>
-                <img src="src/imagens/Chen.jpg" alt="Imagem miniatura do personagem chen">
-            </li>
-            <li class="character"  data-name="cadiado" data-number="06">
-                <span class="tag">1P</span>
-                <img src="src/imagens/cadiado.jpg" alt="cadiado">
-            </li>
-        </ul>
-
-
-        <!-- Player 2 -->
-        <div class="big__character player__number-2">
-            <img src="src/imagens/luna-big.png" alt="Imagem do personagem selecionado número dois">
-            <div class="name__character">
-                <h2 id="nome-jogador-02">Luna</h2>
-            </div>
-        </div>
-
-    </section>
-
-    <section id="card__description">
-        <div class="card">
-            <div class="content__title" id="title_thumbanail"></div>
-            <div class="content__text">
-                <div class="text__box">
-                    <p id="box__descrition" class="text-center">
-                        <span class="placeholder col-6"></span>
-                        <span class="placeholder col-8"></span>
-                        <span class="placeholder w-75"></span>
-                        <span class="placeholder" style="width: 25%;"></span>
-                    </p>
+    <main>
+        <header class="cabecalho">
+            <h1 class="title">Player select</h1>
+        </header>
+    
+        <section class="selection">
+    
+            <!-- Player 1 -->
+            <div class="big__character player__number-1">
+                <img src="src/imagens/mayo-big.png" alt="Imagem do personagem selecionado número um" id="selected__character">
+                <div class="name__character">
+                    <h2 id="nome-jogador-01">Mayo</h2>
                 </div>
             </div>
-            <div class="content__buttons">
-                <input type="submit" value="Confirmar" class="button__style" id="conf">
-                <input type="submit" value="Cancelar" class="button__style" id="canc">
+    
+    
+            <!-- Characters -->
+            <ul class="characters__list">
+               
+                <li class="character seleted" id="mayo" data-name="mayo" data-number="01">
+                    <span class="tag">1P</span>
+                    <img src="src/imagens/Mayo.jpg" alt="Imagem miniatura do personagem mayo">
+                </li>
+                <li class="character" id="el" data-name="el" data-number="02">
+                    <span class="tag">1P</span>
+                    <img src="src/imagens/EL.jpg" alt="Imagem miniatura do personagem el">
+                </li>
+                <li class="character second-player_selete" id="luna" data-name="luna" data-number="03">
+                    <span class="tag">2P</span>
+                    <img src="src/imagens/Luna.jpg" alt="Imagem miniatura do personagem luna">
+                </li>
+                <li class="character" id="vladimir" data-name="vladimir" data-number="04">
+                    <span class="tag">1P</span>
+                    <img src="src/imagens/Vladimir.jpg" alt="Imagem miniatura do personagem vladimir">
+                </li>
+                <li class="character" id="chen" data-name="chen" data-number="05">
+                    <span class="tag">1P</span>
+                    <img src="src/imagens/Chen.jpg" alt="Imagem miniatura do personagem chen">
+                </li>
+                <li class="character"  data-name="cadiado" data-number="06">
+                    <span class="tag">1P</span>
+                    <img src="src/imagens/cadiado.jpg" alt="cadiado">
+                </li>
+            </ul>
+    
+    
+            <!-- Player 2 -->
+            <div class="big__character player__number-2">
+                <img src="src/imagens/luna-big.png" alt="Imagem do personagem selecionado número dois">
+                <div class="name__character">
+                    <h2 id="nome-jogador-02">Luna</h2>
+                </div>
             </div>
-        </div>
-    </section>
+    
+        </section>
 
-    <div class="icons__about">
-        <div class="about__text"></div>
-    </div>
+        
 
-</main>
+        <section id="card__description">
+            <div class="card">
+                <div class="content__title" id="title_thumbanail"></div>
+                <div class="content__text">
+                    <div class="text__box">
+                        <p id="box__descrition" class="text-center">
+                            <span class="placeholder col-6"></span>
+                            <span class="placeholder col-8"></span>
+                            <span class="placeholder w-75"></span>
+                            <span class="placeholder" style="width: 25%;"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="content__buttons">
+                    <input type="submit" value="Confirmar" class="button__style" id="conf">
+                    <input type="submit" value="Cancelar" class="button__style" id="canc">
+                </div>
+            </div>
+        </section>
 
-<audio src="src/audio/music.mp4" loop></audio>
-<script src="src/js/main.js"></script>
+
+
+        
+    </main>
+
+
+    <script src="src/js/main.js"></script>
+    
 
 </body>
 

@@ -17,7 +17,10 @@ class Sprite {
     }
 
     draw() {
-        
+        // Para animar um elemento vc precisa dividir pelo numero de animações que tera dentro de uma imagem - vc divide a imagem pelos frames
+        // c.drawImage(this.image,this.position.x, this.position.y, this.image.width * this.scale , this.image.height * this.scale) sem um elemento de animação
+        // SEVENTH TASK - Background sprite
+        // animar baby 
 
         c.drawImage(
             this.image,
@@ -92,7 +95,7 @@ class Fighter extends Sprite {
 
     // FOURTH TASK - Attacks!!! - ativa o ataque por um periodo de tempo
     attacks() {
-        this.switchSprite('attack')
+        this.switchSprite('attack1')
         this.isAttacking = true
     }
 
@@ -150,7 +153,7 @@ class Fighter extends Sprite {
     switchSprite(sprite) {
 
         // Não chamar o swich, no ataque, se não bug com a animação idle
-        if (this.image === this.sprites.attack.image && this.framaCurrent < this.sprites.attack.framesMax - 1) { //mover uma vez o ataque
+        if (this.image === this.sprites.attack1.image && this.framaCurrent < this.sprites.attack1.framesMax - 1) { //mover uma vez o ataque
             return
         }
         // Quando o jogador é atacado - sobreescreva todas as animações
@@ -193,11 +196,11 @@ class Fighter extends Sprite {
                     this.framaCurrent = 0
                 }
                 break;
-            case 'attack':
-                if (this.image !== this.sprites.attack.image) {
-                    this.image = this.sprites.attack.image
-                    this.framesMax = this.sprites.attack.framesMax  //sobreescreve os frames
-                    this.framaCurrent = 1
+            case 'attack1':
+                if (this.image !== this.sprites.attack1.image) {
+                    this.image = this.sprites.attack1.image
+                    this.framesMax = this.sprites.attack1.framesMax  //sobreescreve os frames
+                    this.framaCurrent = 0
                 }
                 break;
             case 'takeHit':
@@ -211,7 +214,7 @@ class Fighter extends Sprite {
                 if (this.image !== this.sprites.death.image) {
                     this.image = this.sprites.death.image
                     this.framesMax = this.sprites.death.framesMax  //sobreescreve os frames
-                    this.framaCurrent = 10
+                    this.framaCurrent = 0
                 }
                 break;
             default:
@@ -234,7 +237,6 @@ class Fighter extends Sprite {
         if (!(this.position.x + this.width + this.velocity.x >= canvas.width + 50)) {
             if (!(this.position.x + this.width + this.velocity.x <= 160)) {
                 this.position.x += this.velocity.x
-                
             }
         }
 
@@ -258,9 +260,9 @@ class Fighter extends Sprite {
     // virar o personagem ao contrario
     flipHorizontally() {
         if (this === player) {
-            playerSettingOne === 'EL'? c.translate(-100, 0) : c.translate(-100, 0);
+            playerSettingOne === 'El'? c.translate(-100, 0) : c.translate(-100, 0);
         }else{
-            playerSettingTwo === 'EL'? c.translate(-100, 0) : c.translate(-100, 0);
+            playerSettingTwo === 'El'? c.translate(-100, 0) : c.translate(-100, 0);
         }
 
         c.drawImage(
@@ -276,8 +278,6 @@ class Fighter extends Sprite {
 
         c.setTransform(1, 0, 0, 1, 0, 0);
     }
-
-    
 
 
 }
